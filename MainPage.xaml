@@ -107,20 +107,20 @@
                     BorderThickness="4">
 
                     <Image
-                        Name="eee"
+                        Name="AllContractImage"
                         Width="100"
                         Margin="0,5"
                         RelativePanel.AlignHorizontalCenterWithPanel="True"
-                        Source="/Assets/free-icon-contract-2666523.png" />
+                        Source="/Assets/free-icon-contract-2693222.png" />
                     <TextBlock
-                        Name="eeer"
+                        Name="AllContractText"
                         Margin="5"
                         FontSize="16"
                         FontWeight="Bold"
                         Foreground="Black"
-                        RelativePanel.AlignBottomWith="AllFarmImage"
+                        RelativePanel.AlignBottomWith="AllContractImage"
                         RelativePanel.AlignHorizontalCenterWithPanel="True"
-                        Text="Всього фермерських господарств: " />
+                        Text="Всього договорів оренди: " />
 
                     <TextBlock
                         FontSize="22"
