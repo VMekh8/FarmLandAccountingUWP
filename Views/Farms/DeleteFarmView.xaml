@@ -44,7 +44,6 @@
                 Padding="10"
                 Background="#D9534F"
                 BorderBrush="Transparent"
-                Click="OnDeleteFarmButtonClick"
                 Content="Видалити"
                 CornerRadius="5"
                 FontSize="18"

@@ -30,6 +30,7 @@
 
             <ComboBox
                 Name="FarmIdComboBox"
+                Width="660"
                 Margin="0,0,0,10"
                 Padding="10"
                 BorderBrush="LightGray"
@@ -96,7 +97,6 @@
                 Padding="10"
                 Background="#0078D7"
                 BorderBrush="Transparent"
-                Click="OnEditFarmButtonClick"
                 Content="Редагувати"
                 CornerRadius="5"
                 FontSize="18"

@@ -124,6 +124,36 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Farms\AddFarmView.xaml.cs">
+      <DependentUpon>AddFarmView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Farms\ChartFarmInfoView.xaml.cs">
+      <DependentUpon>ChartFarmInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Farms\DeleteFarmView.xaml.cs">
+      <DependentUpon>DeleteFarmView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Farms\EditFarmView.xaml.cs">
+      <DependentUpon>EditFarmView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Farms\TableFarmInfoView.xaml.cs">
+      <DependentUpon>TableFarmInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lands\AddLandView.xaml.cs">
+      <DependentUpon>AddLandView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lands\ChartLandInfoView.xaml.cs">
+      <DependentUpon>ChartLandInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lands\DeleteLandView.xaml.cs">
+      <DependentUpon>DeleteLandView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lands\EditLandView.xaml.cs">
+      <DependentUpon>EditLandView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lands\TableLandInfoView.xaml.cs">
+      <DependentUpon>TableLandInfoView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -132,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\free-icon-contract-2666523.png" />
+    <Content Include="Assets\free-icon-contract-2693222.png" />
     <Content Include="Assets\free-icon-land-1006319.png" />
     <Content Include="Assets\free-icon-land-1504969.png" />
     <Content Include="Assets\MainIcon.png" />
@@ -155,6 +186,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Farms\AddFarmView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Farms\ChartFarmInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Farms\DeleteFarmView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Farms\EditFarmView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Farms\TableFarmInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lands\AddLandView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lands\ChartLandInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lands\DeleteLandView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lands\EditLandView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lands\TableLandInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotNetEnv">
@@ -163,6 +234,12 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\Contracts\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
