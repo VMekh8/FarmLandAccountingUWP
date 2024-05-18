@@ -40,7 +40,7 @@
                     <Image
                         Name="AllFarmImage"
                         Width="100"
-                        Margin="0,5"
+                        Height="138"
                         RelativePanel.AlignHorizontalCenterWithPanel="True"
                         Source="/Assets/noun-farm-2723267.png" />
                     <TextBlock
@@ -75,7 +75,7 @@
                     <Image
                         Name="AllLandImage"
                         Width="100"
-                        Margin="0,5"
+                        Height="123"
                         RelativePanel.AlignHorizontalCenterWithPanel="True"
                         Source="/Assets/free-icon-land-1504969.png" />
                     <TextBlock
@@ -109,7 +109,7 @@
                     <Image
                         Name="AllContractImage"
                         Width="100"
-                        Margin="0,5"
+                        Height="130"
                         RelativePanel.AlignHorizontalCenterWithPanel="True"
                         Source="/Assets/free-icon-contract-2693222.png" />
                     <TextBlock
@@ -131,8 +131,15 @@
                         Text="4" />
                 </RelativePanel>
 
+                <Frame
+                    x:Name="MainFrame"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    Margin="-118,0,-119,-799"
+                    Background="Transparent" />
 
             </Grid>
+
         </RelativePanel>
 
         <StackPanel
@@ -276,15 +283,8 @@
                             Text="Договори" />
 
                     </RelativePanel>
-
                 </Grid>
             </StackPanel>
         </StackPanel>
-
-
-
     </Grid>
-
-
-
 </Page>
