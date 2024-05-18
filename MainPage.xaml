@@ -5,8 +5,286 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:FarmLandAccountingUWP"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="White"
+    Background="Bisque"
     mc:Ignorable="d">
 
-    <Grid />
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <RelativePanel Grid.Column="1" HorizontalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <RelativePanel
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Width="300"
+                    Margin="10"
+                    Background="LightGray"
+                    BorderBrush="Gray"
+                    BorderThickness="4">
+
+                    <Image
+                        Name="AllFarmImage"
+                        Width="100"
+                        Height="138"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Source="/Assets/noun-farm-2723267.png" />
+                    <TextBlock
+                        Name="AllFarmText"
+                        Margin="5"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Foreground="Black"
+                        RelativePanel.AlignBottomWith="AllFarmImage"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Text="Всього фермерських господарств: " />
+
+                    <TextBlock
+                        FontSize="22"
+                        FontWeight="Bold"
+                        Foreground="Black"
+                        RelativePanel.AlignBottomWithPanel="True"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Text="4" />
+
+                </RelativePanel>
+
+                <RelativePanel
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Width="300"
+                    Margin="10"
+                    Background="LightGray"
+                    BorderBrush="Gray"
+                    BorderThickness="4">
+
+                    <Image
+                        Name="AllLandImage"
+                        Width="100"
+                        Height="123"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Source="/Assets/free-icon-land-1504969.png" />
+                    <TextBlock
+                        Name="AllLandText"
+                        FontSize="19"
+                        FontWeight="Bold"
+                        Foreground="Black"
+                        RelativePanel.AlignBottomWith="AllLandImage"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Text="Всього полів: " />
+
+                    <TextBlock
+                        FontSize="22"
+                        FontWeight="Bold"
+                        Foreground="Black"
+                        RelativePanel.AlignBottomWithPanel="True"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Text="4" />
+
+                </RelativePanel>
+
+                <RelativePanel
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Width="300"
+                    Margin="10"
+                    Background="LightGray"
+                    BorderBrush="Gray"
+                    BorderThickness="4">
+
+                    <Image
+                        Name="AllContractImage"
+                        Width="100"
+                        Height="130"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Source="/Assets/free-icon-contract-2693222.png" />
+                    <TextBlock
+                        Name="AllContractText"
+                        Margin="5"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Foreground="Black"
+                        RelativePanel.AlignBottomWith="AllContractImage"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Text="Всього договорів оренди: " />
+
+                    <TextBlock
+                        FontSize="22"
+                        FontWeight="Bold"
+                        Foreground="Black"
+                        RelativePanel.AlignBottomWithPanel="True"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Text="4" />
+                </RelativePanel>
+
+                <Frame
+                    x:Name="MainFrame"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    Margin="-118,0,-119,-799"
+                    Background="Transparent" />
+
+            </Grid>
+
+        </RelativePanel>
+
+        <StackPanel
+            Grid.Column="0"
+            Background="#3c3c3c"
+            BorderBrush="LightGray"
+            BorderThickness="3">
+            <StackPanel>
+
+                <Grid Height="190">
+                    <Image
+                        Width="150"
+                        Margin="0,10,0,20"
+                        HorizontalAlignment="Center"
+                        Source="./Assets/MainIcon.png" />
+                    <TextBlock
+                        Height="auto"
+                        Margin="0,50,0,0"
+                        VerticalAlignment="Bottom"
+                        FontSize="22"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        Text="Облік орендованих угідь"
+                        TextAlignment="Center" />
+                </Grid>
+
+                <Grid Height="auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                    </Grid.RowDefinitions>
+
+                    <RelativePanel
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="20"
+                        Padding="0,10"
+                        BorderBrush="LightGray"
+                        BorderThickness="3"
+                        CornerRadius="10"
+                        PointerEntered="NavButton_Hover"
+                        PointerExited="NavButton_Cancel">
+
+                        <Image
+                            Name="ImageMain"
+                            Width="60"
+                            Margin="0,20"
+                            IsHitTestVisible="False"
+                            Source="/Assets/noun-house-6864456.png" />
+
+                        <TextBlock
+                            Margin="20,20"
+                            FontSize="28"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            IsHitTestVisible="False"
+                            RelativePanel.RightOf="ImageMain"
+                            Text="Головна" />
+
+                    </RelativePanel>
+
+                    <RelativePanel
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="20"
+                        Padding="0,10"
+                        BorderBrush="LightGray"
+                        BorderThickness="3"
+                        CornerRadius="10"
+                        PointerEntered="NavButton_Hover"
+                        PointerExited="NavButton_Cancel">
+
+                        <Image
+                            Name="ImageFarm"
+                            Width="60"
+                            Margin="0,20"
+                            Source="/Assets/noun-farm-2723267.png" />
+
+                        <TextBlock
+                            Margin="20,20"
+                            FontSize="28"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            RelativePanel.RightOf="ImageFarm"
+                            Text="Ферми" />
+
+                    </RelativePanel>
+
+                    <RelativePanel
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Margin="20"
+                        Padding="0,10"
+                        BorderBrush="LightGray"
+                        BorderThickness="3"
+                        CornerRadius="10"
+                        PointerEntered="NavButton_Hover"
+                        PointerExited="NavButton_Cancel">
+
+                        <Image
+                            Name="ImageLand"
+                            Width="60"
+                            Margin="0,20"
+                            Source="/Assets/free-icon-land-1006319.png" />
+
+                        <TextBlock
+                            Margin="20,20"
+                            FontSize="28"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            RelativePanel.RightOf="ImageLand"
+                            Text="Поля" />
+
+                    </RelativePanel>
+
+                    <RelativePanel
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="20"
+                        Padding="0,10"
+                        BorderBrush="LightGray"
+                        BorderThickness="3"
+                        CornerRadius="10"
+                        PointerEntered="NavButton_Hover"
+                        PointerExited="NavButton_Cancel">
+
+                        <Image
+                            Name="ImageContract"
+                            Width="60"
+                            Margin="0,20"
+                            Source="/Assets/free-icon-contract-2666523.png" />
+
+                        <TextBlock
+                            Margin="20,20"
+                            FontSize="28"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            RelativePanel.RightOf="ImageContract"
+                            Text="Договори" />
+
+                    </RelativePanel>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </Page>
