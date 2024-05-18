@@ -132,6 +132,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\MainIcon.png" />
+    <Content Include="Assets\noun-farm-2723267.png" />
+    <Content Include="Assets\noun-house-6864456.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
