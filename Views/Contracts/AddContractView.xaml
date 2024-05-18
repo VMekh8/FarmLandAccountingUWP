@@ -1,9 +1,9 @@
 ﻿<Page
-    x:Class="FarmLandAccountingUWP.Views.Lands.EditLandView"
+    x:Class="FarmLandAccountingUWP.Views.Contracts.AddContractView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="using:FarmLandAccountingUWP.Views.Lands"
+    xmlns:local="using:FarmLandAccountingUWP.Views.Contracts"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Background="Snow"
     mc:Ignorable="d">
@@ -25,65 +25,35 @@
                 FontSize="24"
                 FontWeight="Bold"
                 Foreground="Black"
-                Text="Редагування поля"
+                Text="Додати контракт"
                 TextAlignment="Center" />
 
-            <ComboBox
-                Name="LandIdComboBox"
+            <TextBox
+                Name="ContractNameInput"
+                Margin="0,0,0,10"
+                Padding="10"
+                BorderBrush="LightGray"
+                BorderThickness="1"
+                CornerRadius="5"
+                FontSize="16"
+                PlaceholderText="Назва контракту" />
+
+            <DatePicker
+                Name="StartDatePicker"
                 Width="660"
                 Margin="0,0,0,10"
-                Padding="10"
-                BorderBrush="LightGray"
-                BorderThickness="1"
-                CornerRadius="5"
-                FontSize="16"
-                PlaceholderText="Оберіть ID поля" />
+                FontSize="16" />
 
-            <TextBox
-                Name="NameInput"
+            <DatePicker
+                Name="EndDatePicker"
+                Width="660"
                 Margin="0,0,0,10"
-                Padding="10"
-                BorderBrush="LightGray"
-                BorderThickness="1"
-                CornerRadius="5"
-                FontSize="16"
-                PlaceholderText="Назва" />
-
-            <TextBox
-                Name="AreaInput"
-                Margin="0,0,0,10"
-                Padding="10"
-                BorderBrush="LightGray"
-                BorderThickness="1"
-                CornerRadius="5"
-                FontSize="16"
-                InputScope="Number"
-                PlaceholderText="Площа" />
-
-            <TextBox
-                Name="LocationInput"
-                Margin="0,0,0,10"
-                Padding="10"
-                BorderBrush="LightGray"
-                BorderThickness="1"
-                CornerRadius="5"
-                FontSize="16"
-                PlaceholderText="Розташування" />
-
-            <TextBox
-                Name="AddressInput"
-                Margin="0,0,0,10"
-                Padding="10"
-                BorderBrush="LightGray"
-                BorderThickness="1"
-                CornerRadius="5"
-                FontSize="16"
-                PlaceholderText="Адреса" />
+                FontSize="16" />
 
             <ComboBox
                 Name="FarmIdComboBox"
                 Width="660"
-                Margin="0,0,0,20"
+                Margin="0,0,0,10"
                 Padding="10"
                 BorderBrush="LightGray"
                 BorderThickness="1"
@@ -91,12 +61,23 @@
                 FontSize="16"
                 PlaceholderText="Оберіть ID фермерського господарства" />
 
+            <ComboBox
+                Name="LandPlotIdComboBox"
+                Width="660"
+                Margin="0,0,0,20"
+                Padding="10"
+                BorderBrush="LightGray"
+                BorderThickness="1"
+                CornerRadius="5"
+                FontSize="16"
+                PlaceholderText="Оберіть ID ділянки землі" />
+
             <Button
                 Width="693"
                 Padding="10"
                 Background="#0078D7"
                 BorderBrush="Transparent"
-                Content="Редагувати"
+                Content="Додати контракт"
                 CornerRadius="5"
                 FontSize="18"
                 FontWeight="Bold"
