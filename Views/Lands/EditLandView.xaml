@@ -96,7 +96,6 @@
                 Padding="10"
                 Background="#0078D7"
                 BorderBrush="Transparent"
-                Click="OnEditLandButtonClick"
                 Content="Редагувати"
                 CornerRadius="5"
                 FontSize="18"

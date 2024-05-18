@@ -124,6 +124,15 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Contracts\AddContractView.xaml.cs">
+      <DependentUpon>AddContractView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contracts\DeleteContractView.xaml.cs">
+      <DependentUpon>DeleteContractView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contracts\TableContractInfoView.xaml.cs">
+      <DependentUpon>TableContractInfoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Farms\AddFarmView.xaml.cs">
       <DependentUpon>AddFarmView.xaml</DependentUpon>
     </Compile>
@@ -186,6 +195,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Contracts\AddContractView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contracts\DeleteContractView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contracts\TableContractInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Farms\AddFarmView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -239,7 +260,6 @@
     <Folder Include="Models\" />
     <Folder Include="Services\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Views\Contracts\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

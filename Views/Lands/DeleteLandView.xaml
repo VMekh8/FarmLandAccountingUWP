@@ -44,7 +44,6 @@
                 Padding="10"
                 Background="#E81123"
                 BorderBrush="Transparent"
-                Click="OnDeleteLandButtonClick"
                 Content="Видалити"
                 CornerRadius="5"
                 FontSize="18"
