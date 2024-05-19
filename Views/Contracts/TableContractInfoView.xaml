@@ -67,7 +67,7 @@
             Foreground="#0078D7"
             Text="Перегляд контрактів" />
 
-        <!--  Search Panel  -->
+        <!--  Search and Navigation Panel  -->
         <StackPanel
             Grid.Row="1"
             Margin="0,0,20,10"
@@ -75,18 +75,36 @@
             VerticalAlignment="Center"
             Orientation="Horizontal">
             <TextBox x:Name="SearchTextBox" PlaceholderText="Пошук..." />
-            <Button Click="SearchButtonClick" Content="Пошук" />
-            <Button Click="RefreshButtonClick" Content="Оновити таблицю" />
+            <Button Content="Пошук" />
+            <Button Content="Оновити таблицю" />
+            <Button Content="Додати контракт" />
+            <Button Content="Видалити контракт" />
         </StackPanel>
 
+        <!--  Data Table  -->
         <controls:DataGrid x:Name="ContractsDataGrid" Grid.Row="2">
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn Width="50" Header="ID" />
-                <controls:DataGridTextColumn Width="200" Header="Назва контракту" />
-                <controls:DataGridTextColumn Width="150" Header="Дата початку" />
-                <controls:DataGridTextColumn Width="150" Header="Дата закінчення" />
-                <controls:DataGridTextColumn Width="200" Header="ID фермерського господарства" />
-                <controls:DataGridTextColumn Width="150" Header="ID поля" />
+                <controls:DataGridTextColumn
+                    Width="200"
+                    Binding="{Binding ContractName}"
+                    Header="Назва контракту" />
+                <controls:DataGridTextColumn
+                    Width="150"
+                    Binding="{Binding StartDate}"
+                    Header="Дата початку" />
+                <controls:DataGridTextColumn
+                    Width="150"
+                    Binding="{Binding EndDate}"
+                    Header="Дата закінчення" />
+                <controls:DataGridTextColumn
+                    Width="200"
+                    Binding="{Binding FarmID}"
+                    Header="ID фермерського господарства" />
+                <controls:DataGridTextColumn
+                    Width="150"
+                    Binding="{Binding LandPlotID}"
+                    Header="ID поля" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>
