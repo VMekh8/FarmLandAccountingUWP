@@ -74,17 +74,21 @@
             HorizontalAlignment="Right"
             VerticalAlignment="Center"
             Orientation="Horizontal">
-            <TextBox x:Name="SearchTextBox" PlaceholderText="Пошук..." />
-            <Button Content="Пошук" />
             <Button Content="Оновити таблицю" />
             <Button Content="Додати контракт" />
             <Button Content="Видалити контракт" />
+            <TextBox x:Name="SearchTextBox" PlaceholderText="Пошук..." />
+            <Button Content="Пошук" />
+
         </StackPanel>
 
         <!--  Data Table  -->
         <controls:DataGrid x:Name="ContractsDataGrid" Grid.Row="2">
             <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn Width="50" Header="ID" />
+                <controls:DataGridTextColumn
+                    Width="50"
+                    Binding="{Binding ID}"
+                    Header="ID" />
                 <controls:DataGridTextColumn
                     Width="200"
                     Binding="{Binding ContractName}"
