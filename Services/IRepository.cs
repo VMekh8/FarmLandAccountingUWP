@@ -9,7 +9,7 @@ namespace FarmLandAccountingUWP.Services
 
         Task Update (T entity);
 
-        Task Delete();
+        Task Delete(int id);
 
         Task<List<T>> GetAll();
     }

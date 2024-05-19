@@ -7,11 +7,12 @@ using Windows.UI.Popups;
 
 namespace FarmLandAccountingUWP.Services
 {
-    public class LeasesService : IRepository<LeasesModel>
+    public sealed class LeasesService : IRepository<LeasesModel>
     {
+        private DataBase db = new DataBase();
+
         public async Task Create(LeasesModel entity)
         {
-            DataBase db = new DataBase();
 
             try
             {
@@ -39,19 +40,35 @@ namespace FarmLandAccountingUWP.Services
             }
         }
 
-        public Task Delete()
+        public async Task Delete(int id)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                string query = @"DELETE FROM Leases WHERE ID = @ID";
+
+                using (SqlCommand cmd = new SqlCommand(query, db.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@ID", id);
+
+                    await cmd.ExecuteNonQueryAsync();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                var dialog = new MessageDialog(e.Message);
+                await dialog.ShowAsync();
+            }
         }
 
         public Task<List<LeasesModel>> GetAll()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task Update(LeasesModel entity)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
